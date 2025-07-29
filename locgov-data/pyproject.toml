@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "locgov_data"
+version = "0.2.0"
+description = "Tools for interacting with public data via loc.gov"
+authors = [{ name = "Library of Congress, DCMS"}]
+readme = "README.md"
+dependencies = [
+    "pandas",
+    "requests",
+    "plac",
+    "lxml", 
+    "beautifulsoup4",
+    "pillow",
+    "pymarc",
+    "ipython",
+    "ipykernel"
+]
+
+[tool.setuptools]
+packages = ["locgov_data", "locgov_data.classes", "locgov_data.helpers", "locgov_data.cli", "tests"] #include any other directories at the same level as locgov_data
+
+[project.scripts]
+locgov_data = "locgov_data.cli.__main__:pyproject_entry" # This allows you to run the script simply as `locgov_data`
+locgov_data-test = "tests.unittests:main" # Run unit tests with `locgov_data_test` command

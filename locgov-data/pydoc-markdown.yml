@@ -1,0 +1,43 @@
+# generate documentation with command from package root: `pydoc-markdown`
+
+loaders:
+  - type: python
+    ignore_when_discovered: [locgov_data\cli, tests, locgov_data.cli]
+renderer:
+  type: markdown
+  filename: ./docs/README.md
+  # insert_header_anchors: true
+  # html_headers: false
+  # code_headers: true
+  # descriptive_class_title: false
+  # descriptive_module_title: false
+  # add_module_prefix: true
+  # add_method_class_prefix: true
+  # add_full_prefix: true
+  # sub_prefix: true
+  # data_code_block: false
+  # data_expression_maxlength: 500
+  # classdef_code_block: true
+  # classdef_with_decorators: true
+  # signature_python_help_style: true
+  # signature_code_block: false
+  # signature_in_header: true
+  # signature_with_vertical_bar: true
+  # signature_with_def: true
+  # signature_class_prefix: false
+  # signature_with_decorators: true
+  # render_typehint_in_data_header: true
+  # render_page_title: true
+  # render_toc: true
+  # render_toc_title: "`locgov_data` library"
+  # toc_maxdepth: 4
+  # render_module_header: true
+  # render_module_header_template
+  # source_linker: true
+  # header_level_by_type:
+  #   module: 1
+  #   class: 2
+  #   method: 2
+  #   function: 2
+  #   attribute: 3
+  #   variable: 3
