@@ -1,0 +1,14 @@
+<div class="container <%= page.id %>" role="main">
+    <div class="page-content">
+        <%- page.content %>
+        <div id="lightgallery" class="gallery-container">
+        <% site.data[page.data_key].forEach(function(item) { %>
+            <% if (item.collections.includes(page.collection)) { %>
+            <a href="<%= item.image %>" data-lg-size="<%= item.image_dims %>" data-sub-html="<h4><a href='<%= item.url %>' target='_blank'><%= item.title %></a></h4><p>by <%- titlecase(item.contributor) %>, part of <%- titlecase(item.collection) %></p>">
+                <img src="<%= item.thumb %>" />
+            </a>
+            <% } %>
+        <% }); %>
+        </div>
+    </div>
+</div>

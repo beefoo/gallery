@@ -1,0 +1,13 @@
+<header>
+    <% theme.menu.forEach(function(item) { %>
+        <% if (page.data_key === item.id) { %>
+            <h2><%= item.label %> in LOC collections:</h2>
+            <ul class="nav" role="navigation">
+            <% item.collections.forEach(function(collection) { %>
+                <li><a href="<%- url_for(collection.url) %>" <% if (collection.id === page.id) { %>class="active" disabled<% } %>><%= collection.label %></a></li>
+            <% }); %>
+            </ul>
+        <% } %>
+    <% }); %>
+    
+</header>

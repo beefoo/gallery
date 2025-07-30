@@ -1,0 +1,22 @@
+menu:
+  - label: Eastern Oklahoma
+    id: eastern_ok
+    collections:
+      - id: eastern_ok_chronam
+        label: Chronicling America
+        url: /eastern-ok/chronam/
+      - id: eastern_ok_fsa
+        label: Farm Security Administration
+        url: /eastern-ok/fsa/
+      - id: eastern_ok_sanborn
+        label: Sanborn Maps
+        url: /eastern-ok/sanborn/
+      - id: eastern_ok_hhh
+        label: HABS/HARE/HALS
+        url: /eastern-ok/hhh/
+      - id: eastern_ok_highsmith
+        label: Carol Highsmith Archive
+        url: /eastern-ok/highsmith/
+  - label: Cleveland
+    id: cleveland
+    url: /cleveland/chronam/
